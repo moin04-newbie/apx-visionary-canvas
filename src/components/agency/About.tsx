@@ -57,7 +57,7 @@ export default function About() {
         {...fadeUp(0.35)}
         className="text-center text-black/50 text-base md:text-lg max-w-sm mx-auto leading-relaxed mb-10"
       >
-        At Apx.co, we combine creativity with strategy to create relevant and
+        At Aster.co, we combine creativity with strategy to create relevant and
         functional designs.
       </motion.p>
 

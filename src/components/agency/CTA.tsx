@@ -30,7 +30,9 @@ export default function CTA() {
           transition={{ duration: 0.5, delay: 0.35 }}
         >
           <a
-            href="mailto:hello@apx.co"
+            href="https://calendly.com/ramanpandhare10/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-black text-[#F5F5F5] text-base font-semibold hover:bg-black/80 transition-all duration-300 active:scale-95"
           >
             <Mail size={16} />

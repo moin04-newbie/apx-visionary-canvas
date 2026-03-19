@@ -30,37 +30,40 @@ export default function Hero() {
         </motion.span>
       </div>
 
-      {/* Main content — asymmetric grid */}
-      <div className="flex-1 grid grid-cols-12 gap-4 px-6 md:px-10">
-        {/* Left empty column — Swiss grid tension */}
-        <div className="col-span-1 md:col-span-5" />
+      {/* Main content — centered hero */}
+      <div className="flex-1 flex flex-col items-center justify-center px-6 md:px-10 text-center">
+        <motion.h1
+          {...fadeUp(0.25)}
+          className="text-display-hero font-bold tracking-agency leading-[0.88] text-black"
+        >
+          Tired of switching
+          <br />
+          agencies?
+        </motion.h1>
 
-        {/* Right headline block */}
-        <div className="col-span-11 md:col-span-7 flex flex-col justify-start">
-          <motion.h1
-            {...fadeUp(0.25)}
-            className="text-display-hero font-bold tracking-agency leading-[0.92] text-black max-w-xl"
-          >
-            Achieve powerful results with digital ideas
-          </motion.h1>
+        <motion.p
+          {...fadeUp(0.4)}
+          className="mt-4 text-[clamp(1.5rem,4vw,3.5rem)] font-medium tracking-agency leading-tight text-black/60 italic"
+        >
+          We get you.
+        </motion.p>
 
-          <motion.div {...fadeUp(0.4)} className="mt-8 flex items-start gap-4">
-            {/* Minimal avatar/icon cluster */}
-            <div className="flex -space-x-2">
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="w-8 h-8 rounded-full bg-black/10 border-2 border-[#F5F5F5]"
-                />
-              ))}
-            </div>
-            <p className="text-sm text-black/50 leading-snug max-w-xs">
-              lorem ipsum con sectetur
-              <br />
-              lorem ipsum consec
-            </p>
-          </motion.div>
-        </div>
+        <motion.div {...fadeUp(0.55)} className="mt-10 flex items-center gap-4">
+          {/* Minimal avatar/icon cluster */}
+          <div className="flex -space-x-2">
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                className="w-8 h-8 rounded-full bg-black/10 border-2 border-[#F5F5F5]"
+              />
+            ))}
+          </div>
+          <p className="text-sm text-black/50 leading-snug max-w-xs text-left">
+            lorem ipsum con sectetur
+            <br />
+            lorem ipsum consec
+          </p>
+        </motion.div>
       </div>
 
       {/* Brand stamp — full-width massive type */}
@@ -71,7 +74,7 @@ export default function Hero() {
         className="w-full px-4 md:px-6 mt-12 leading-none overflow-hidden"
       >
         <h2 className="text-brand-stamp font-black tracking-agency leading-none text-black select-none whitespace-nowrap">
-          APX.CO
+          ASTER.CO
         </h2>
       </motion.div>
 

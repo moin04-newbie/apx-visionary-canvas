@@ -1,5 +1,7 @@
+import logo from "@/logo.png";
+
 const menuLinks = ["Home", "Service", "Our Work", "Project", "About Us"];
-const serviceLinks = ["Web & App Development", "Animation", "Web Design", "Mobile App", "Illustration"];
+const serviceLinks = ["Web & App Development", "Animation", "Web Design", "Mobile App", "Performance Marketing"];
 const socialLinks = ["Instagram", "Twitter", "LinkedIn", "Facebook"];
 
 export default function Footer() {
@@ -9,12 +11,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="col-span-12 lg:col-span-4">
           <div className="flex items-center gap-2.5 mb-5">
-            <div className="w-7 h-7 rounded-full border-2 border-white/60 flex items-center justify-center relative">
-              <div className="w-px h-full bg-white/60 absolute" />
-              <div className="h-px w-full bg-white/60 absolute" />
-              <div className="w-1.5 h-1.5 rounded-full bg-white" />
-            </div>
-            <span className="font-bold text-xl tracking-tight">Apx.co</span>
+            <img src={logo} alt="Aster.co" className="h-8 w-auto object-contain brightness-0 invert" />
           </div>
           <p className="text-white/40 text-sm leading-relaxed max-w-xs">
             We are a creative team that believes that every design has a story, and our job is to tell that story in the most impactful way possible.
@@ -60,7 +57,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-xs text-white/25">© 2024 Apx.co. All Rights Reserved.</p>
+        <p className="text-xs text-white/25">© 2024 Aster.co. All Rights Reserved.</p>
         <div className="flex gap-6">
           <a href="#" className="text-xs text-white/25 hover:text-white/60 transition-colors">Terms & Conditions</a>
           <span className="text-white/15">|</span>

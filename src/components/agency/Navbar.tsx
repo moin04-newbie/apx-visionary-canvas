@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "@/logo.png";
 
 const navLinks = ["Home", "Service", "Our Work", "Project", "About Us"];
 
@@ -26,14 +27,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center relative">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-px h-full bg-black absolute" />
-              <div className="h-px w-full bg-black absolute" />
-              <div className="w-2 h-2 rounded-full bg-black" />
-            </div>
-          </div>
-          <span className="font-bold text-xl tracking-tight text-black">Apx.co</span>
+          <img src={logo} alt="Aster.co" className="h-10 w-auto object-contain mix-blend-multiply" />
         </a>
 
         {/* Desktop nav */}
@@ -52,7 +46,9 @@ export default function Navbar() {
         {/* CTA */}
         <div className="flex items-center gap-4">
           <a
-            href="#contact"
+            href="https://calendly.com/ramanpandhare10/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:flex items-center px-6 py-2.5 rounded-full border-2 border-black bg-transparent text-black text-sm font-medium hover:bg-black hover:text-[#F5F5F5] transition-all duration-300 active:scale-95"
           >
             Let's Talk
@@ -92,7 +88,9 @@ export default function Navbar() {
               </motion.a>
             ))}
             <a
-              href="#contact"
+              href="https://calendly.com/ramanpandhare10/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
               className="mt-4 px-8 py-3 rounded-full bg-black text-[#F5F5F5] text-base font-medium"
             >

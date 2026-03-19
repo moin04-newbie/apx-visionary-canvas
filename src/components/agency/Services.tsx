@@ -2,12 +2,15 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X } from "lucide-react";
 import PlaceholderImage from "./PlaceholderImage";
+import service1Img from "@/source/service-1.jpg";
+import service2Img from "@/source/service-2.jpg";
+import service3Img from "@/source/service-3.jpg";
 
 const services = [
   {
     id: 1,
-    title: "Illustration",
-    desc: "Our illustration services aim to deliver unique and characterful visuals, in line with your brand identity from concept to final details.",
+    title: "Performance Marketing",
+    desc: "We turn ad spend into measurable growth — scaling brands with data, strategy, and high-converting funnels.",
   },
   {
     id: 2,
@@ -16,13 +19,13 @@ const services = [
   },
   {
     id: 3,
-    title: "Mobile App",
-    desc: "Native-quality mobile experiences designed with meticulous attention to gesture, hierarchy, and platform conventions.",
+    title: "Shoots & Product Shoot",
+    desc: "Premium product visuals that boost trust, clicks.",
   },
   {
     id: 4,
-    title: "Animation",
-    desc: "Motion that tells the story — from micro-interactions to full-blown brand animations that move people.",
+    title: "Social Media",
+    desc: "Aisa content jo brand banaye aur audience ko genuinely engage kare.",
   },
 ];
 
@@ -95,16 +98,7 @@ export default function Services() {
                       <p className="text-black/50 text-sm leading-relaxed max-w-sm">
                         {svc.desc}
                       </p>
-                      {/* Three small placeholder cards */}
-                      <div className="grid grid-cols-3 gap-2 max-w-sm">
-                        {[0, 1, 2].map((j) => (
-                          <PlaceholderImage
-                            key={j}
-                            aspect="aspect-video"
-                            className="rounded-lg"
-                          />
-                        ))}
-                      </div>
+
                       <button className="text-xs font-bold tracking-[0.1em] uppercase text-black/60 hover:text-black transition-colors self-start">
                         See More →
                       </button>
@@ -117,15 +111,17 @@ export default function Services() {
           <div className="border-t border-black/10" />
         </div>
 
-        {/* Right — large placeholder grid */}
+        {/* Right — large image grid */}
         <div className="col-span-12 lg:col-span-5 hidden lg:grid grid-cols-3 gap-3 content-start mt-2">
-          {[0, 1, 2].map((i) => (
-            <PlaceholderImage
-              key={i}
-              aspect="aspect-[3/4]"
-              className={`rounded-xl ${i === 1 ? "mt-10" : ""}`}
-            />
-          ))}
+          <div className="aspect-[3/4] rounded-xl overflow-hidden">
+            <img src={service1Img} alt="Performance Marketing" className="w-full h-full object-cover" />
+          </div>
+          <div className="aspect-[3/4] rounded-xl overflow-hidden mt-10">
+            <img src={service2Img} alt="Web Design" className="w-full h-full object-cover" />
+          </div>
+          <div className="aspect-[3/4] rounded-xl overflow-hidden">
+            <img src={service3Img} alt="Shoots & Product Shoot" className="w-full h-full object-cover" />
+          </div>
         </div>
       </div>
     </section>
